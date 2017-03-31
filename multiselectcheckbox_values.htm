@@ -1,0 +1,13 @@
+<input  id="ad_Checkbox1" class="ads_Checkbox" type="checkbox" value="1" />
+<input  id="ad_Checkbox2" class="ads_Checkbox" type="checkbox" value="2" />
+<input  id="ad_Checkbox3" class="ads_Checkbox" type="checkbox" value="3" />
+<input  id="ad_Checkbox4" class="ads_Checkbox" type="checkbox" value="4" />
+<input type="button" id="save_value" name="save_value" value="Save" />
+-------------------------------------------------------------------------------
+$('#save_value').click(function() {
+    var sel = $('input[type=checkbox]:checked').map(function(_, el) {
+        return $(el).val();
+    }).get();
+    
+    alert(sel);
+})
